@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cldk2rpkq3v7j"
+path="res://.godot/imported/Travelers_ Home a trio.mp3-39b8655e3aec3329f3b8812bae676cb0.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Travelers_ Home a trio.mp3"
+dest_files=["res://.godot/imported/Travelers_ Home a trio.mp3-39b8655e3aec3329f3b8812bae676cb0.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

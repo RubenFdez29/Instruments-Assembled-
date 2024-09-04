@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://bxn3y4uuvsbsg"
+path="res://.godot/imported/Travelers_ Home tutti.mp3-d03c786e80c56c8f57af0acad0240d55.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Travelers_ Home tutti.mp3"
+dest_files=["res://.godot/imported/Travelers_ Home tutti.mp3-d03c786e80c56c8f57af0acad0240d55.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

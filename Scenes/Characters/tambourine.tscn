@@ -1,0 +1,64 @@
+[gd_scene load_steps=10 format=3 uid="uid://c53ungwvd3tpb"]
+
+[ext_resource type="Texture2D" uid="uid://casj20uap1fkg" path="res://Art/Characters/Instruments/Pandereta.png" id="1_23qe2"]
+[ext_resource type="Script" path="res://Scripts/Characters/tambourine.gd" id="1_emni8"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_2w2to"]
+atlas = ExtResource("1_23qe2")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_g1h2v"]
+atlas = ExtResource("1_23qe2")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ksj6w"]
+atlas = ExtResource("1_23qe2")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_raqxp"]
+atlas = ExtResource("1_23qe2")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_6s2ia"]
+atlas = ExtResource("1_23qe2")
+region = Rect2(2048, 0, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_rulig"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_2w2to")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_g1h2v")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ksj6w")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_raqxp")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_6s2ia")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_he8sq"]
+size = Vector2(320, 240)
+
+[node name="Tambourine" type="CharacterBody2D"]
+scale = Vector2(0.05, 0.05)
+script = ExtResource("1_emni8")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -120)
+sprite_frames = SubResource("SpriteFrames_rulig")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-4.76837e-06, -120)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_he8sq")

@@ -1,0 +1,66 @@
+[gd_scene load_steps=9 format=3 uid="uid://chswvcd2sgc8j"]
+
+[ext_resource type="Script" path="res://Scripts/end.gd" id="1_t8fj1"]
+[ext_resource type="Texture2D" uid="uid://wack6nwtcck4" path="res://Art/Menu/Wallpaper.jpg" id="2_jwq8k"]
+[ext_resource type="FontFile" uid="uid://c1mr846x6fx8w" path="res://Art/Font/NerkoOne-Regular.ttf" id="3_y34y6"]
+[ext_resource type="AudioStream" uid="uid://bxn3y4uuvsbsg" path="res://Art/Music/Travelers_ Home tutti.mp3" id="4_dx6j3"]
+[ext_resource type="PackedScene" uid="uid://b8tt8ogt62cua" path="res://Scenes/Characters/guitar.tscn" id="5_1mjou"]
+[ext_resource type="PackedScene" uid="uid://d3iuv26yn08x5" path="res://Scenes/Characters/cello.tscn" id="6_xbvxs"]
+[ext_resource type="PackedScene" uid="uid://dexn07nc7srwg" path="res://Scenes/Characters/trumpet.tscn" id="7_2yc2g"]
+[ext_resource type="PackedScene" uid="uid://c53ungwvd3tpb" path="res://Scenes/Characters/tambourine.tscn" id="8_gwygc"]
+
+[node name="End" type="Node2D"]
+script = ExtResource("1_t8fj1")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+offset_right = 1280.0
+offset_bottom = 580.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jwq8k")
+
+[node name="Label" type="Label" parent="."]
+offset_left = 264.0
+offset_top = 64.0
+offset_right = 1021.0
+offset_bottom = 193.0
+theme_override_fonts/font = ExtResource("3_y34y6")
+theme_override_font_sizes/font_size = 100
+text = "GRACIAS POR JUGAR"
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_dx6j3")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
+
+[node name="Guitar" parent="." instance=ExtResource("5_1mjou")]
+position = Vector2(112, 464)
+scale = Vector2(0.5, 0.5)
+
+[node name="Cello" parent="." instance=ExtResource("6_xbvxs")]
+position = Vector2(1160, 464)
+scale = Vector2(0.7, 0.7)
+
+[node name="Trumpet" parent="." instance=ExtResource("7_2yc2g")]
+position = Vector2(408, 376)
+scale = Vector2(0.4, 0.4)
+
+[node name="Tambourine" parent="." instance=ExtResource("8_gwygc")]
+position = Vector2(832, 392)
+scale = Vector2(0.4, 0.4)
+
+[node name="Exit" type="Button" parent="."]
+offset_left = 589.0
+offset_top = 512.0
+offset_right = 690.0
+offset_bottom = 581.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_y34y6")
+theme_override_font_sizes/font_size = 50
+text = "Salir"
+
+[connection signal="pressed" from="Exit" to="." method="_on_exit_pressed"]

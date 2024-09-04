@@ -1,0 +1,83 @@
+[gd_scene load_steps=12 format=3 uid="uid://d3iuv26yn08x5"]
+
+[ext_resource type="Script" path="res://Scripts/Characters/cello.gd" id="1_21fpe"]
+[ext_resource type="Texture2D" uid="uid://cyp64yrmydv31" path="res://Art/Characters/Instruments/Violoncello.png" id="1_sm5ng"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_spqsb"]
+atlas = ExtResource("1_sm5ng")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_hoscy"]
+atlas = ExtResource("1_sm5ng")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_cs4y1"]
+atlas = ExtResource("1_sm5ng")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_qfgyu"]
+atlas = ExtResource("1_sm5ng")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_l83a8"]
+atlas = ExtResource("1_sm5ng")
+region = Rect2(2048, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ambqm"]
+atlas = ExtResource("1_sm5ng")
+region = Rect2(2560, 0, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_tcqfo"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_spqsb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_hoscy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_cs4y1")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_qfgyu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_l83a8")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ambqm")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_ywhfa"]
+size = Vector2(217.857, 514.286)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_c7f3s"]
+radius = 171.429
+
+[node name="Cello" type="CharacterBody2D"]
+scale = Vector2(0.1, 0.1)
+script = ExtResource("1_21fpe")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -257.143)
+sprite_frames = SubResource("SpriteFrames_tcqfo")
+animation = &"idle"
+frame_progress = 0.0687385
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(5.35714, -257.143)
+shape = SubResource("RectangleShape2D_ywhfa")
+
+[node name="Detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection_area"]
+position = Vector2(0, -142.857)
+shape = SubResource("CircleShape2D_c7f3s")
+
+[connection signal="body_entered" from="Detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="Detection_area" to="." method="_on_detection_area_body_exited"]

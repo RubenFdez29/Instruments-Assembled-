@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c1mg0q863jpvd"
+path="res://.godot/imported/Tuba_2.mp3-e9cd0eb83036af3f16b16f58171720ef.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Minigames/3. Los timbres/Tuba_2.mp3"
+dest_files=["res://.godot/imported/Tuba_2.mp3-e9cd0eb83036af3f16b16f58171720ef.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

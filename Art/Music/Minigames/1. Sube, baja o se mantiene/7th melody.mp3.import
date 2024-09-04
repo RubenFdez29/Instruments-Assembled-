@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c3t2cnw80bvh0"
+path="res://.godot/imported/7th melody.mp3-cb77abe474d8e6e98b2580309aff6b3e.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Minigames/1. Sube, baja o se mantiene/7th melody.mp3"
+dest_files=["res://.godot/imported/7th melody.mp3-cb77abe474d8e6e98b2580309aff6b3e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

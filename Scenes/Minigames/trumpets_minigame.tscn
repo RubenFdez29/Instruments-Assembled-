@@ -1,0 +1,379 @@
+[gd_scene load_steps=17 format=3 uid="uid://buv8kqh7yj43n"]
+
+[ext_resource type="Texture2D" uid="uid://ddwx2w5fnmv6j" path="res://Art/Minigames/minigame_trumpet.jpg" id="1_k4yt2"]
+[ext_resource type="Script" path="res://Scripts/Minigames/trumpets_minigame.gd" id="1_xw38u"]
+[ext_resource type="AudioStream" uid="uid://cnrs4t8ivw35i" path="res://Art/Music/Minigames/3. Los timbres/Clarinete_1.mp3" id="3_4pupb"]
+[ext_resource type="ButtonGroup" uid="uid://p627seagbfm5" path="res://Scripts/Minigames/Group_1.tres" id="3_wix2o"]
+[ext_resource type="ButtonGroup" uid="uid://bn5tnw8pulbit" path="res://Scripts/Minigames/Group_2.tres" id="4_3vftq"]
+[ext_resource type="AudioStream" uid="uid://c3ktbtr7xflyw" path="res://Art/Music/Minigames/3. Los timbres/Clarinete_2.mp3" id="4_gro64"]
+[ext_resource type="FontFile" uid="uid://c1mr846x6fx8w" path="res://Art/Font/NerkoOne-Regular.ttf" id="5_kjuus"]
+[ext_resource type="PackedScene" uid="uid://8qnhmgdmxsii" path="res://Scenes/pause_menu.tscn" id="5_rqq21"]
+[ext_resource type="AudioStream" uid="uid://c5uk8j7hkmqxj" path="res://Art/Music/Minigames/3. Los timbres/Piano_1.mp3" id="5_v10ii"]
+[ext_resource type="AudioStream" uid="uid://bn4h801vgpki7" path="res://Art/Music/Minigames/3. Los timbres/Piano_2.mp3" id="6_u02cc"]
+[ext_resource type="AudioStream" uid="uid://f8rkps7c4i4k" path="res://Art/Music/Minigames/3. Los timbres/Tuba_1.mp3" id="7_dg3uj"]
+[ext_resource type="AudioStream" uid="uid://c1mg0q863jpvd" path="res://Art/Music/Minigames/3. Los timbres/Tuba_2.mp3" id="8_qufk6"]
+[ext_resource type="AudioStream" uid="uid://cx4r7x57otjbg" path="res://Art/Music/Minigames/3. Los timbres/Violín_1.mp3" id="9_kjx3g"]
+[ext_resource type="AudioStream" uid="uid://yibfsqxuvatj" path="res://Art/Music/Minigames/3. Los timbres/Violín_2.mp3" id="10_68y86"]
+[ext_resource type="AudioStream" uid="uid://be44c565lw8qy" path="res://Art/Music/Minigames/3. Los timbres/Xilófono_1.mp3" id="11_g3joy"]
+[ext_resource type="AudioStream" uid="uid://b5q6nt1e1xx7y" path="res://Art/Music/Minigames/3. Los timbres/Xilófono_2.mp3" id="12_vjkxr"]
+
+[node name="trumpets_minigame" type="Node2D"]
+script = ExtResource("1_xw38u")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+modulate = Color(1, 1, 1, 0.784314)
+offset_left = -1.0
+offset_top = -1.0
+offset_right = 1280.0
+offset_bottom = 579.0
+texture = ExtResource("1_k4yt2")
+expand_mode = 1
+
+[node name="Audios" type="TextureRect" parent="."]
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Clarinet_1" type="Button" parent="Audios"]
+modulate = Color(0.313726, 1, 0, 1)
+layout_mode = 0
+offset_left = 176.0
+offset_top = 88.0
+offset_right = 247.0
+offset_bottom = 119.0
+mouse_default_cursor_shape = 2
+text = "Play 1"
+
+[node name="Check_clarinet_1" type="CheckBox" parent="Audios"]
+modulate = Color(0, 0.494118, 0.227451, 1)
+layout_mode = 0
+offset_left = 259.0
+offset_top = 93.0
+offset_right = 284.0
+offset_bottom = 117.0
+mouse_default_cursor_shape = 2
+button_group = ExtResource("3_wix2o")
+
+[node name="Clarinet_2" type="Button" parent="Audios"]
+modulate = Color(0.313726, 1, 0, 1)
+layout_mode = 0
+offset_left = 434.0
+offset_top = 254.0
+offset_right = 505.0
+offset_bottom = 285.0
+mouse_default_cursor_shape = 2
+text = "Play 8"
+
+[node name="Check_clarinet_2" type="CheckBox" parent="Audios"]
+modulate = Color(0, 0.494118, 0.227451, 1)
+layout_mode = 0
+offset_left = 515.0
+offset_top = 258.0
+offset_right = 540.0
+offset_bottom = 282.0
+mouse_default_cursor_shape = 2
+button_group = ExtResource("4_3vftq")
+
+[node name="Violin_1" type="Button" parent="Audios"]
+modulate = Color(0.313726, 1, 0, 1)
+layout_mode = 0
+offset_left = 176.0
+offset_top = 339.0
+offset_right = 247.0
+offset_bottom = 370.0
+mouse_default_cursor_shape = 2
+text = "Play 4"
+
+[node name="Check_violin_1" type="CheckBox" parent="Audios"]
+modulate = Color(0, 0.494118, 0.227451, 1)
+layout_mode = 0
+offset_left = 259.0
+offset_top = 344.0
+offset_right = 284.0
+offset_bottom = 368.0
+mouse_default_cursor_shape = 2
+button_group = ExtResource("3_wix2o")
+
+[node name="Violin_2" type="Button" parent="Audios"]
+modulate = Color(0.313726, 1, 0, 1)
+layout_mode = 0
+offset_left = 434.0
+offset_top = 88.0
+offset_right = 505.0
+offset_bottom = 119.0
+mouse_default_cursor_shape = 2
+text = "Play 6"
+
+[node name="Check_violin_2" type="CheckBox" parent="Audios"]
+modulate = Color(0, 0.494118, 0.227451, 1)
+layout_mode = 0
+offset_left = 515.0
+offset_top = 91.0
+offset_right = 540.0
+offset_bottom = 115.0
+mouse_default_cursor_shape = 2
+button_group = ExtResource("4_3vftq")
+
+[node name="Piano_1" type="Button" parent="Audios"]
+modulate = Color(0.313726, 1, 0, 1)
+layout_mode = 0
+offset_left = 176.0
+offset_top = 424.0
+offset_right = 247.0
+offset_bottom = 455.0
+mouse_default_cursor_shape = 2
+text = "Play 5"
+
+[node name="Check_piano_1" type="CheckBox" parent="Audios"]
+modulate = Color(0, 0.494118, 0.227451, 1)
+layout_mode = 0
+offset_left = 259.0
+offset_top = 429.0
+offset_right = 284.0
+offset_bottom = 453.0
+mouse_default_cursor_shape = 2
+button_group = ExtResource("3_wix2o")
+
+[node name="Piano_2" type="Button" parent="Audios"]
+modulate = Color(0.313726, 1, 0, 1)
+layout_mode = 0
+offset_left = 434.0
+offset_top = 340.0
+offset_right = 505.0
+offset_bottom = 371.0
+mouse_default_cursor_shape = 2
+text = "Play 9"
+
+[node name="Check_piano_2" type="CheckBox" parent="Audios"]
+modulate = Color(0, 0.494118, 0.227451, 1)
+layout_mode = 0
+offset_left = 515.0
+offset_top = 346.0
+offset_right = 540.0
+offset_bottom = 370.0
+mouse_default_cursor_shape = 2
+button_group = ExtResource("4_3vftq")
+
+[node name="Tuba_1" type="Button" parent="Audios"]
+modulate = Color(0.313726, 1, 0, 1)
+layout_mode = 0
+offset_left = 176.0
+offset_top = 172.0
+offset_right = 247.0
+offset_bottom = 203.0
+mouse_default_cursor_shape = 2
+text = "Play 2"
+
+[node name="Check_tuba_1" type="CheckBox" parent="Audios"]
+modulate = Color(0, 0.494118, 0.227451, 1)
+layout_mode = 0
+offset_left = 259.0
+offset_top = 176.0
+offset_right = 284.0
+offset_bottom = 200.0
+mouse_default_cursor_shape = 2
+button_group = ExtResource("3_wix2o")
+
+[node name="Tuba_2" type="Button" parent="Audios"]
+modulate = Color(0.313726, 1, 0, 1)
+layout_mode = 0
+offset_left = 434.0
+offset_top = 424.0
+offset_right = 505.0
+offset_bottom = 455.0
+mouse_default_cursor_shape = 2
+text = "Play 10"
+
+[node name="Check_tuba_2" type="CheckBox" parent="Audios"]
+modulate = Color(0, 0.494118, 0.227451, 1)
+layout_mode = 0
+offset_left = 515.0
+offset_top = 427.0
+offset_right = 540.0
+offset_bottom = 451.0
+mouse_default_cursor_shape = 2
+button_group = ExtResource("4_3vftq")
+
+[node name="Xilo_1" type="Button" parent="Audios"]
+modulate = Color(0.313726, 1, 0, 1)
+layout_mode = 0
+offset_left = 176.0
+offset_top = 255.0
+offset_right = 247.0
+offset_bottom = 286.0
+mouse_default_cursor_shape = 2
+text = "Play 3 "
+
+[node name="Check_xilo_1" type="CheckBox" parent="Audios"]
+modulate = Color(0, 0.494118, 0.227451, 1)
+layout_mode = 0
+offset_left = 259.0
+offset_top = 261.0
+offset_right = 284.0
+offset_bottom = 285.0
+mouse_default_cursor_shape = 2
+button_group = ExtResource("3_wix2o")
+
+[node name="Xilo_2" type="Button" parent="Audios"]
+modulate = Color(0.313726, 1, 0, 1)
+layout_mode = 0
+offset_left = 434.0
+offset_top = 171.0
+offset_right = 505.0
+offset_bottom = 202.0
+mouse_default_cursor_shape = 2
+text = "Play 7"
+
+[node name="Check_xilo_2" type="CheckBox" parent="Audios"]
+modulate = Color(0, 0.494118, 0.227451, 1)
+layout_mode = 0
+offset_left = 515.0
+offset_top = 177.0
+offset_right = 540.0
+offset_bottom = 201.0
+mouse_default_cursor_shape = 2
+button_group = ExtResource("4_3vftq")
+
+[node name="Instruments" type="TextureRect" parent="."]
+offset_right = 40.0
+offset_bottom = 40.0
+
+[node name="Clarinet_button" type="Button" parent="Instruments"]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 168.0
+offset_right = 1040.0
+offset_bottom = 200.0
+mouse_default_cursor_shape = 2
+text = "Clarinete"
+
+[node name="Tuba_button" type="Button" parent="Instruments"]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 232.0
+offset_right = 1040.0
+offset_bottom = 264.0
+mouse_default_cursor_shape = 2
+text = "Tuba"
+
+[node name="Piano_button" type="Button" parent="Instruments"]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 296.0
+offset_right = 1040.0
+offset_bottom = 328.0
+mouse_default_cursor_shape = 2
+text = "Piano"
+
+[node name="Xilo_button" type="Button" parent="Instruments"]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 360.0
+offset_right = 1040.0
+offset_bottom = 392.0
+mouse_default_cursor_shape = 2
+text = "Xilófono"
+
+[node name="Violin_button" type="Button" parent="Instruments"]
+layout_mode = 0
+offset_left = 944.0
+offset_top = 424.0
+offset_right = 1040.0
+offset_bottom = 456.0
+mouse_default_cursor_shape = 2
+text = "Violín"
+
+[node name="Open_door" type="Button" parent="."]
+visible = false
+offset_left = 880.0
+offset_top = 64.0
+offset_right = 1112.0
+offset_bottom = 128.0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("5_kjuus")
+theme_override_font_sizes/font_size = 30
+text = "¡ABRE LA PUERTA!"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause_menu" parent="CanvasLayer" instance=ExtResource("5_rqq21")]
+process_mode = 3
+
+[node name="Clarinet_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_4pupb")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="Clarinet_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_gro64")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="Piano_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_v10ii")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="Piano_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_u02cc")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="Tuba_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_dg3uj")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="Tuba_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_qufk6")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="Violin_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_kjx3g")
+volume_db = -15.0
+bus = &"Music"
+
+[node name="Violin_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_68y86")
+volume_db = -15.0
+bus = &"Music"
+
+[node name="Xilo_1" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("11_g3joy")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="Xilo_2" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("12_vjkxr")
+volume_db = -10.0
+bus = &"Music"
+
+[connection signal="pressed" from="Audios/Clarinet_1" to="." method="_on_clarinet_1_pressed"]
+[connection signal="toggled" from="Audios/Check_clarinet_1" to="." method="_on_check_clarinet_1_toggled"]
+[connection signal="pressed" from="Audios/Clarinet_2" to="." method="_on_clarinet_2_pressed"]
+[connection signal="toggled" from="Audios/Check_clarinet_2" to="." method="_on_check_clarinet_2_toggled"]
+[connection signal="pressed" from="Audios/Violin_1" to="." method="_on_violin_1_pressed"]
+[connection signal="toggled" from="Audios/Check_violin_1" to="." method="_on_check_violin_1_toggled"]
+[connection signal="pressed" from="Audios/Violin_2" to="." method="_on_violin_2_pressed"]
+[connection signal="toggled" from="Audios/Check_violin_2" to="." method="_on_check_violin_2_toggled"]
+[connection signal="pressed" from="Audios/Piano_1" to="." method="_on_piano_1_pressed"]
+[connection signal="toggled" from="Audios/Check_piano_1" to="." method="_on_check_piano_1_toggled"]
+[connection signal="pressed" from="Audios/Piano_2" to="." method="_on_piano_2_pressed"]
+[connection signal="toggled" from="Audios/Check_piano_2" to="." method="_on_check_piano_2_toggled"]
+[connection signal="pressed" from="Audios/Tuba_1" to="." method="_on_tuba_1_pressed"]
+[connection signal="toggled" from="Audios/Check_tuba_1" to="." method="_on_check_tuba_1_toggled"]
+[connection signal="pressed" from="Audios/Tuba_2" to="." method="_on_tuba_2_pressed"]
+[connection signal="toggled" from="Audios/Check_tuba_2" to="." method="_on_check_tuba_2_toggled"]
+[connection signal="pressed" from="Audios/Xilo_1" to="." method="_on_xilo_1_pressed"]
+[connection signal="toggled" from="Audios/Check_xilo_1" to="." method="_on_check_xilo_1_toggled"]
+[connection signal="pressed" from="Audios/Xilo_2" to="." method="_on_xilo_2_pressed"]
+[connection signal="toggled" from="Audios/Check_xilo_2" to="." method="_on_check_xilo_2_toggled"]
+[connection signal="pressed" from="Instruments/Clarinet_button" to="." method="_on_clarinet_button_pressed"]
+[connection signal="pressed" from="Instruments/Tuba_button" to="." method="_on_tuba_button_pressed"]
+[connection signal="pressed" from="Instruments/Piano_button" to="." method="_on_piano_button_pressed"]
+[connection signal="pressed" from="Instruments/Xilo_button" to="." method="_on_xilo_button_pressed"]
+[connection signal="pressed" from="Instruments/Violin_button" to="." method="_on_violin_button_pressed"]
+[connection signal="pressed" from="Open_door" to="." method="_on_open_door_pressed"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://dvpjuedm3hfcc"
+path="res://.godot/imported/Going Home.mp3-b02b3cf54885ba81bcc7cbe0f79f226e.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Going Home.mp3"
+dest_files=["res://.godot/imported/Going Home.mp3-b02b3cf54885ba81bcc7cbe0f79f226e.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

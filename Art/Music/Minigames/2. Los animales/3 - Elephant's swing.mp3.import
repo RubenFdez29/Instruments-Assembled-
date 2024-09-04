@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://h1nvg0rssiea"
+path="res://.godot/imported/3 - Elephant's swing.mp3-923530ba53d3b0a76a583e3598b50f2e.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Minigames/2. Los animales/3 - Elephant's swing.mp3"
+dest_files=["res://.godot/imported/3 - Elephant's swing.mp3-923530ba53d3b0a76a583e3598b50f2e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

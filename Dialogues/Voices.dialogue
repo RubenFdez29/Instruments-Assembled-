@@ -1,0 +1,427 @@
+~ tutorial
+
+set global.dialogue_running = true
+
+Tutorial: Avanza los diálogos con la tecla espacio.
+Tutorial: Utiliza la teclas W-A-S-D para poder moverte por el escenario.
+Tutorial: Interactúa con la tecla F.
+
+set global.dialogue_running = false
+
+=> END
+
+
+~ inicial_start
+
+set global.dialogue_running = true
+
+Voz entrecortada: Por favor...
+Voz entrecortada: Ven...
+Voz entrecortada: Estoy aquí... 
+Voz entrecortada: A tu lado...
+Voz entrecortada: Te espero en la escuela… Por favor…
+
+set global.dialogue_running = false
+
+=> END
+
+
+~ school_start
+
+set global.dialogue_running = true
+
+if global.current_world == "red":
+
+	Alma del pueblo musical: ¡Oh! Veo que has ido a salvar a Guitarra, como te dije. ¡Muchísimas gracias, joven! Ahora podemos volver a disfrutar de su dulce sonido y del color rojo, como puedes ver.
+	Alma del pueblo musical: Si todos los instrumentos regresan, la música y el color volverán con nosotros. ¿A dónde te dirigirás ahora?
+	Alma del pueblo musical: Así que te ha dicho que vayas a hablar con Violoncello... Si, es buena idea.
+	Alma del pueblo musical: Su casa está entre la escuela y el huerto de la comunidad, al Este de aquí. Muchas gracias por tu ayuda, joven.
+	
+	set global.dialogue_running = false
+	=> END!
+elif global.current_world == "green":
+	
+	Alma del pueblo musical: Siento la melodía de Violoncello de nuevo. Puedo ver el verde de los campos y los árboles. Lo estás haciendo muy bien, joven.
+	Alma del pueblo musical: Tu siguiente parada será buscar a Trompeta. Puedes empezar por su casa.
+	Alma del pueblo musical: Esta se encuentra al Sureste del pueblo, pasando el huerto. 
+	
+	set global.dialogue_running = false
+	=> END!
+	
+elif global.current_world == "yellow":
+	
+	Alma del pueblo musical: ¡Qué bien! Están volviendo todos, por fin. Ya tenemos a tres, y ya han vuelto el color rojo, verde y amarillo.
+	Alma del pueblo musical: Necesitamos alegrar un poco más este pueblo.
+	Alma del pueblo musical: Nuestro pequeño grupo de Percusión vive en el bosque, al Noreste de aquí.
+	Alma del pueblo musical: Mucho ánimo, joven, y gracias por tanta ayuda.
+	
+	set global.dialogue_running = false
+	=> END!
+	
+elif global.current_world == "color":
+	
+	Alma del pueblo musical: Joven, has salvado el pueblo. Estamos muy agradecidos.
+	Alma del pueblo musical: Has demostrado que tienes un gran corazón y eres muy valiente.
+	Alma del pueblo musical: Este pueblo siempre tendrá las puertas abiertas para ti.
+	Alma del pueblo musical: Recuerda que para marcharte a tu mundo tienes que seguir el camino del Oeste, por donde has llegado.
+	Alma del pueblo musical: De nuevo, gracias por todo. ¡Nos vemos pronto!
+	
+	set global.dialogue_running = false
+	=> END!
+else:
+	
+	Voz entrecortada: Aquí, al fondo. Encima de la mesa del profesor...
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ book0_start
+
+set global.dialogue_running = true
+
+if global.current_world == "red":
+	
+	Alma del pueblo musical: ¡Oh! Veo que has ido a salvar a Guitarra, como te dije. ¡Muchísimas gracias, joven! Ahora podemos volver a disfrutar de su dulce sonido y del color rojo, como puedes ver.
+	Alma del pueblo musical: Si todos los instrumentos regresan, la música y el color volverán con nosotros. ¿A dónde te dirigirás ahora?
+	Alma del pueblo musical: Así que te ha dicho que vayas a hablar con Violoncello... Si, es buena idea.
+	Alma del pueblo musical: Su casa está entre la escuela y el huerto de la comunidad, al Este de aquí. Muchas gracias por tu ayuda, joven.
+	
+	set global.dialogue_running = false
+	=> END!
+
+elif global.current_world == "green":
+	
+	Alma del pueblo musical: Siento la melodía de Violoncello de nuevo. Puedo ver el verde de los campos y los árboles. Lo estás haciendo muy bien, joven.
+	Alma del pueblo musical: Tu siguiente parada será buscar a Trompeta. Puedes empezar por su casa.
+	Alma del pueblo musical: Esta se encuentra al Sureste del pueblo, pasando el huerto. 
+	
+	set global.dialogue_running = false
+	=> END!
+	
+elif global.current_world == "yellow":
+	
+	Alma del pueblo musical: ¡Qué bien! Están volviendo todos, por fin. Ya tenemos a tres, y ya han vuelto el color rojo, verde y amarillo.
+	Alma del pueblo musical: Necesitamos alegrar un poco más este pueblo.
+	Alma del pueblo musical: Nuestro pequeño grupo de Percusión vive en el bosque, al Noreste de aquí.
+	Alma del pueblo musical: Mucho ánimo, joven, y gracias por tanta ayuda.
+	
+	set global.dialogue_running = false
+	=> END!
+	
+elif global.current_world == "color":
+	
+	Alma del pueblo musical: Joven, has salvado el pueblo. Estamos muy agradecidos.
+	Alma del pueblo musical: Has demostrado que tienes un gran corazón y eres muy valiente.
+	Alma del pueblo musical: Este pueblo siempre tendrá las puertas abiertas para ti.
+	Alma del pueblo musical: Recuerda que para marcharte a tu mundo tienes que seguir el camino del Oeste, por donde has llegado.
+	Alma del pueblo musical: De nuevo, gracias por todo. ¡Nos vemos pronto!
+
+	set global.dialogue_running = false
+	=> END!
+	
+else:
+	
+	Voz entrecortada: Has venido. Al fin.
+	Voz entrecortada: Gracias, joven. Yo soy el Alma del pueblo musical. Necesitamos tu ayuda. Este pueblo corre peligro.
+	Alma del pueblo musical: Este lugar, el pueblo musical, rebosa alegría y diversión. Aquí viven los instrumentos musicales, que tocan música juntos y se divierten día y noche. Sin embargo, algo terrible ha ocurrido.
+	Alma del pueblo musical: Los habitantes del pueblo musical han dejado de tocar juntos. No hay colores en el pueblo musical, ¡y no hay música! Eso no es posible…
+	Alma del pueblo musical: Los instrumentos se han ido, uno por uno, y se han llevado su música y un color. No podemos quedarnos así, sin música, sin colores, es terrible.
+	Alma del pueblo musical: Debes visitar a todos los vecinos del pueblo musical, joven, y salvar esta tierra de paz y alegría.
+	Alma del pueblo musical: Te prometo que habrá una recompensa para tu esfuerzo, valiente.
+	Alma del pueblo musical: En los libros de esta escuela encontrarás apuntes de clase de los instrumentos. Hay información útil en ellos.
+	Alma del pueblo musical: Aunque quizá ya sabes la lección, jojojojo.
+	Alma del pueblo musical: Visita a Guitarra, joven. Ella es sabia y sabrá qué hacer a continuación. Su casa se ve al salir de aquí. Joven, toda esperanza está sobre vos.
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ book1_start
+
+set global.dialogue_running = true
+
+Leccion nº 1: Moverse por el pueblo musical.\nEn el pueblo musical, nos movemos con las teclas W-A-S-D del teclado, para desplazarse en las cuatro direcciones. 
+Leccion nº 1: Interactuar en el pueblo musical.\nPara interactuar con los objetos y los habitantes, pulsamos la letra F.\nPara avanzar en los diálogos, pulsamos la tecla Espacio o el click izquierdo del ratón.
+Leccion nº 1: Saltar en el pueblo musical.\nA veces, para evitar caer al vacío o evitar obstáculos, saltamos con la tecla Espacio.
+Leccion nº 1: Atacar en el pueblo musical.\nEn algunas ocasiones, es necesario defenderse. En esa situación, pulsamos el botón E.
+Leccion nº 1: Descansar en el pueblo musical.\nSi tienes que descansar un rato, puedes pulsar la letra P para entrar en el Menú de Pausa.
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ book2_start
+
+set global.dialogue_running = true
+
+Leccion nº 2: Las melodías.\nUna melodía es una secuencia de sonidos que transmite una idea, al igual que las letras se unen para formar palabras.\nLas secuencias de sonidos, las melodías, pueden clasificarse en tres grupos, según la altura de los sonidos que las forman.
+Leccion nº 2: Si el primer sonido es más grave que el último, la frase sube, y tiene sentido ascendente, de grave a agudo.\nSi el primer sonido es más agudo que el último, la frase baja, es decir, tiene sentido descendente, de agudo a grave.\nPor último, si el primer y el último sonido tienen la misma altura, la frase se mantiene, ya que no sube ni baja.
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ book3_start
+
+set global.dialogue_running = true
+
+Lección nº 3: Las familias de instrumentos.\nLos instrumentos se pueden clasificar según la forma en la que producen su sonido. Se suele hablar de tres familias principales. Cuerda, viento y percusión, pero dentro de ellas existen subfamilias.
+Lección nº 3: La familia de cuerda.\nPertenecen a la familia de la cuerda todos los instrumentos que suenan por la vibración de una cuerda. Según la manera de activar esa cuerda, pueden ser de cuerda frotada, punteada o percutida. 
+Lección nº 3: La familia de viento.\nPertenecen a la familia de viento todos los instrumentos que suenan con aire. Pueden ser de viento madera o viento metal, según su material.
+Lección nº 3: La familia de percusión.\nPertenecen a la familia de la percusión los instrumentos que se tocan golpeándolos. Según su material, pueden ser de madera, de metal o de membrana.
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ guitars_mono
+
+set global.dialogue_running = true
+
+(Se escuchan ronquidos extraños)
+Guitarra: [shake rate=20 level=10]Jrrrrrrr...[/shake]
+Guitarra: (respiración profunda)
+Guitarra: [shake rate=20 level=10]Jrrrrrrr...[/shake]
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ guitars_minigame
+
+set global.dialogue_running = true
+
+Alma del pueblo musical: Joven, Guitarra está encerrada en una pesadilla, y para poder entrar en ella tienes que superar esta prueba.\n¡Necesitarás el ratón de tu ordenador!\nPulsa el botón Reproducir para escuchar distintas melodías.
+Alma del pueblo musical: Después, pulsa el botón correcto según la melodía suba, baje o se mantenga.\n ¡TÚ PUEDES!
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ correct_answer
+
+set global.dialogue_running = true
+
+Alma del pueblo musical: [[¡Respuesta correcta!|¡Sigue así!|¡Muy bien!|¡Fantástico!]]
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ wrong_answer
+
+set global.dialogue_running = true
+
+Alma del pueblo musical: [[Inténtalo otra vez|A la próxima lo conseguirás|Casi]]
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ guitars_world
+
+set global.dialogue_running = true
+
+Guitarra: ¿Eh? [wave amp=25 freq=5]¿Quién eres tú? ¿Cómo has llegado aquí?[/wave]
+Guitarra: Oh, si, creo que esto es una especie de sueño, pero no sé cuánto tiempo llevo aquí encerrada.
+Guitarra: Se ve un resplandor en esa dirección, pero por más que lo intento, no puedo llegar. Estoy desolada, seguro que todos me esperan ahí fuera…
+Guitarra: [shake rate=20 level=10]¿¡Cómo!?[/shake] ¿Que todos mis compañeros han abandonado el pueblo? Entonces es importantísimo que salgamos de aquí. 
+Guitarra: Por favor, intenta llegar hasta el final de la sala por mí y, cuando salgas de esta pesadilla, despiértame en el mundo real. Para no caer al vacío, pulsa la tecla espacio, así conseguirás saltar. ¡Confío en ti!
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ guitars_house
+
+set global.dialogue_running = true
+
+Guitarra: ¡Oh! ¡Estoy en mi casa! ¡Al fin! Esto es… ¡¡fantástico!!
+Guitarra: Me siento aún un poco aturdida, pero te estoy infinitamente agradecida. No habría sido capaz de salir de esa pesadilla sin ti. 
+Guitarra: Ahora puedo volver a tocar mi melodía mágica. Por favor, ve a buscar a mis compañeros. ¿Puedes ir a casa de Violoncello? Él es mi mejor amigo, le aprecio muchísimo.
+Guitarra: Su casa está entre la escuela y el huerto de la comunidad. No sé qué le habrá pasado, espero que esté bien… Me siento muy preocupada por él.
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ cellos_house_mono
+
+set global.dialogue_running = true
+
+Voz lejana: Nunca nadie me encontrará… En esta dimensión paralela que instalé en la ventana, ya nadie se podrá reir de mí.\n¡Soy el rey de los instrumentos! ¡El más guay! ¡EL QUE MÁS MOLA!
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ cellos_minigame
+
+set global.dialogue_running = true
+
+Alma del pueblo musical: Joven, parece que te siguen poniendo trabas.\nTendrás que volver a hacer uso del ratón.\nEscucha los audios con el botón reproducir.
+Alma del pueblo musical: Después, selecciona el animal con el que asocies la música. Piensa en cómo son esos animales en su día a día.\nCómo caminan, cómo se mueven, su tamaño...
+Alma del pueblo musical: ¡Mucho ánimo!
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ cellos_world
+
+set global.dialogue_running = true
+
+Violoncello: [next=3][speed=0.3]¿Quién eres tú? [wait=1.3]¿Cómo has llegado aquí? \n[wait=1.3][speed=0.7]Pensaba que nadie me encontraría aquí…\n[wait=1.3][speed=1]¡Todo es un fastidio!
+Violoncello: [next=3][speed=0.5]Bueno… En realidad, no me importa cómo has llegado…\n[speed=0.3][wait=1]¡Nunca [wait=1]podrás [wait=1]salir!
+Violoncello: [next=3.5][speed=0.3]Esta es mi dimensión,[wait=0.5] sólo mía,[wait=0.5] aquí no estoy atado a ninguna regla.\n[wait=1]Soy libre y molo más que todos esos vejestorios que me esperan ahí fuera…
+Violoncello: [next=2.2][speed=0.3]¿Cómo?[wait=1.3] ¿Se han ido todos?[wait=1.3] Esto confirma mis sospechas. [speed=0.2]No les importo.
+Violoncello: [next=4][speed=0.3]Toda la vida me han infravalorado y despreciado porque hago [wait=0.5]“el bajo”, [wait=0.5]“el papel aburrido”, [wait=0.5]“notas largas y graves”...
+Violoncello: [next=2][speed=0.3]Nunca me han dado las gracias por nada, y sé que me odian y me creen soso y aburrido.
+Violoncello: [next=3][speed=0.3][shake rate=5 level=3]¡No tengo nada de aburrido![/shake][wait=1]\nSoy genial,[wait=0.5] y ahora ya nadie me podrá decir nunca lo contrario.
+Violoncello: [next=2][speed=0.3]De hecho,[wait=1] si no estás dispuesto a decirme que soy el mejor de los instrumentos…
+Violoncello: [next=2][speed=0.2]debes morir.[wait=1.5]\n[shake rate=10 level=5]¡Muere por mí ahora![/shake]\n[shake rate=20 level=7]¡¡Amigos, al ataque!![/shake]
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ cellos_explain
+
+set global.dialogue_running = true
+
+Alma del pueblo musical: ¡JOVEN! ¡Ten cuidado! He invocado un arco de Violoncello en tu bolsillo. Úsalo para derrotar a esos Slimes.
+Alma del pueblo musical: Para ello, usa la tecla E del teclado o botón B del mando. Ayuda a Violoncello...
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ cellos_apologize
+
+set global.dialogue_running = true
+
+Violoncello: [next=2][speed=0.3]No…[wait=1] Mis monstruos…[wait=1] Yo… Les creé…[wait=0.5] porque me sentía solo.
+Violoncello: [next=2][speed=0.3]¡No![wait=1.5] Nadie me echa de menos ahí fuera.[wait=1] [shake rate=5 level=3]Me odian[/shake], [speed=0.2]y lo sé...
+Violoncello: [next=2][speed=0.3]¿Cómo?[wait=1.5] ¿Guitarra te ha dicho que soy[wait=1] [speed=0.2]su mejor amigo?[wait=1] [speed=0.3]¿Y está preocupada por mí? [wait=1]No puede ser…
+Violoncello: [next=3][speed=0.3]Durante todo este tiempo, yo sólo quería sentirme admirado.[wait=1] Como Flauta, que hace melodías muy bonitas y ligeras...
+Violoncello: [next=3][speed=0.3]O como Trompeta y Percusión, que hacen reir a todo el mundo…
+Violoncello: [next=2][speed=0.3]Pero Guitarra y yo,[wait=0.5] que no molamos,[wait=0.5] que siempre hacemos lo mismo…[wait=1]\nOh, Guitarra…[wait=1]\nQuiero volver contigo, amiga,[wait=0.5] y con los demás.
+Violoncello: [next=3][speed=0.3][wave amp=10 freq=5]Perdonadme…[/wave][wait=1] Por favor,[wait=0.5] volvamos a mi casa e intentemos arreglar el problema del pueblo.
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ cellos_house
+
+set global.dialogue_running = true
+
+Violoncello: Oh, hola… Gracias por abrirme los ojos. Estaba inmerso en mi sed de venganza, en la monotonía de no sentirme valorado.
+Violoncello: Gracias por decirme lo que siente Guitarra de verdad. Nunca volveré a olvidar el valor de una buena amistad.
+Violoncello: Ahora veo que soy muy feliz en el pueblo musical, y lo único que necesito es hacer música con mis amigos. Salva a los demás, por favor.
+Violoncello: Seguro que Trompeta se ha ido de fiesta y se ha olvidado de la hora. ¡Es una despreocupada! Podría pasarse meses de fiesta, hasta olvidarse de su hogar, sus amigos y su vida entera.
+Violoncello: Su casa está al final del pueblo, pasando del huerto y la plaza de la fuente. Por favor, haz que vuelva con nosotros.
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ trumpets_house_mono
+
+set global.dialogue_running = true
+
+Voz lejana: ¡¡JAJAJAJAJAJAJAJAJA!! ¡Que siga la fieeestaaaa! ¡Fiesta en el ático, yey!
+(se escucha música y risas a lo lejos)
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ trumpets_minigame
+
+set global.dialogue_running = true
+
+Alma del pueblo musical: Rápido Joven, sigue el camino. Parece que Trompeta se ha ido un poco más lejos de lo habitual.
+Alma del pueblo musical: Con la ayuda del ratón, escucha los distintos audios y selecciona aquellos que estén tocados por el mismo instrumento, uno en cada columna.\nDespués, selecciona el instrumento de la puerta que está interpretando ambos audios.
+Alma del pueblo musical: ¡Seguimos confiando en ti! Creo que cuando resuelvas el acertijo, se abrirá la puerta.
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ trumpets_world_start
+
+set global.dialogue_running = true
+
+(parece que la música suena más cerca...)
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ trumpets_world_end
+
+set global.dialogue_running = true
+
+Trompeta: ¡Anda! ¿Y tú quien eres? ¿Qué haces aquí? ¿Vienes a unirte a la fiesta?
+Trompeta: ¿Cómo? ¿Que me vas a llevar de vuelta? Pero si acabo de llegar...
+Trompeta: Llevo aquí… Un día, no, dos… ¿Una semana? Espera, ¡tú no eres mi madre! ¡Esta es mi vida! ¡Déjame en paz!
+Trompeta: ¿Cómo dices? ¿Que te envían mis amigos?
+Trompeta: Es cierto que echo de menos a Guitarra y a Violoncello, pero ellos son unos sosos... Y Pandereta y los demás son muy graciosos, pero… Y Flauta, que es muy cariñosa… Es imposible enfadarse con ella…
+Trompeta: ¿Cómo? ¿El pueblo está en peligro? Y yo… Yo… Yo he estado divirtiéndome todo este tiempo sin preocuparme de nada ni nadie…
+Trompeta: ¡Soy una inconsciente! ¿Cómo puede ser? Ellos… Me necesitan.
+Trompeta: ¡Volvamos a mi casa! Adios, fiesta, adiós, descontrol. Mis verdaderos colegas me están esperando.
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ trumpets_house
+
+set global.dialogue_running = true
+
+Trompeta: ¡Gracias otra vez, colega! Me alegro de que hayas venido a buscarme. A veces me pierdo y… olvido todas mis responsabilidades.
+Trompeta: Ya, ya sé que eso no es bueno. Por eso estoy arrepentida y voy a cuidar de lo que tengo, porque es muy valioso. 
+Trompeta: Tengo unos buenos amigos y una buena vida. No puedo esperar a que estemos todos juntos otra vez.
+Trompeta: Por favor, seguro que los pequeñajos de la percusión necesitan ayuda. A menudo se pierden y discuten, son como niños pequeños. 
+Trompeta: Viven en el bosque al noreste del pueblo, si sigues el camino por detrás del huerto comunitario llegarás. ¡No tiene pérdida!
+
+set global.dialogue_running = false
+
+=> END!
+
+
+~ world_color
+
+set global.dialogue_running = true
+
+Rubén Fernández: En este lugar se encontrará el escenario del bosque, para dar paso a los dos últimos mundos.
+Rubén Fernández: Este es el final del juego, de momento. Gracias por haber llegado hasta aquí, y espero que os haya gustado.
+Rubén Fernández: En la escuela os espera un último mensaje.
+
+set global.dialogue_running = false
+
+=> END!
+

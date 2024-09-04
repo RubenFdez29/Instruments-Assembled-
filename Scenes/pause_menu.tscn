@@ -1,0 +1,201 @@
+[gd_scene load_steps=4 format=3 uid="uid://8qnhmgdmxsii"]
+
+[ext_resource type="Script" path="res://Scripts/pause_menu.gd" id="1_cby88"]
+[ext_resource type="AudioStream" uid="uid://b2k1qj8wafevq" path="res://Art/Music/Botón salir.mp3" id="2_ec84e"]
+[ext_resource type="FontFile" uid="uid://c1mr846x6fx8w" path="res://Art/Font/NerkoOne-Regular.ttf" id="2_hmdll"]
+
+[node name="Pause_menu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_cby88")
+
+[node name="ColorRect" type="ColorRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+color = Color(0.243137, 0.243137, 0.243137, 0.588235)
+
+[node name="RichTextLabel" type="RichTextLabel" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -379.0
+offset_top = -93.0
+offset_right = 382.0
+offset_bottom = 107.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_fonts/normal_font = ExtResource("2_hmdll")
+theme_override_font_sizes/normal_font_size = 40
+text = "                                 PAUSA
+
+       PULSA P O START PARA VOLVER AL JUEGO"
+
+[node name="Main_menu" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -186.0
+offset_top = -77.0
+offset_right = 186.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_hmdll")
+theme_override_font_sizes/font_size = 50
+text = "Menú principal"
+
+[node name="Save_game" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -184.0
+offset_top = -580.0
+offset_right = 188.0
+offset_bottom = -503.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_hmdll")
+theme_override_font_sizes/font_size = 50
+text = "Guardar Partida"
+
+[node name="Options" type="Button" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -186.0
+offset_top = -184.0
+offset_right = 186.0
+offset_bottom = -107.0
+grow_horizontal = 2
+grow_vertical = 0
+theme_override_fonts/font = ExtResource("2_hmdll")
+theme_override_font_sizes/font_size = 50
+text = "Opciones"
+
+[node name="Audio" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Audio"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -140.0
+offset_right = 140.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+
+[node name="Labels" type="VBoxContainer" parent="Audio/HBoxContainer"]
+layout_mode = 2
+
+[node name="Master" type="Label" parent="Audio/HBoxContainer/Labels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hmdll")
+theme_override_font_sizes/font_size = 33
+text = "Global"
+horizontal_alignment = 1
+
+[node name="Music" type="Label" parent="Audio/HBoxContainer/Labels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hmdll")
+theme_override_font_sizes/font_size = 33
+text = "Música"
+horizontal_alignment = 1
+
+[node name="Sound FX" type="Label" parent="Audio/HBoxContainer/Labels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("2_hmdll")
+theme_override_font_sizes/font_size = 33
+text = "Efectos"
+horizontal_alignment = 1
+
+[node name="Slider" type="VBoxContainer" parent="Audio/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Master" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+min_value = -30.0
+max_value = 5.0
+step = 0.001
+
+[node name="Music" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+min_value = -5.0
+max_value = 20.0
+step = 0.001
+
+[node name="Sound FX" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+min_value = -60.0
+max_value = 5.0
+step = 0.001
+
+[node name="BackFromAudio" type="Button" parent="Audio"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -81.0
+offset_top = -77.0
+offset_right = 81.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("2_hmdll")
+theme_override_font_sizes/font_size = 50
+text = "Volver"
+
+[node name="Menu_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("2_ec84e")
+volume_db = -10.0
+bus = &"Sound FX"
+
+[connection signal="pressed" from="Main_menu" to="." method="_on_main_menu_pressed"]
+[connection signal="pressed" from="Save_game" to="." method="_on_save_game_pressed"]
+[connection signal="pressed" from="Options" to="." method="_on_options_pressed"]
+[connection signal="value_changed" from="Audio/HBoxContainer/Slider/Master" to="." method="_on_master_value_changed"]
+[connection signal="value_changed" from="Audio/HBoxContainer/Slider/Music" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="Audio/HBoxContainer/Slider/Sound FX" to="." method="_on_sound_fx_value_changed"]
+[connection signal="pressed" from="Audio/BackFromAudio" to="." method="_on_back_from_audio_pressed"]

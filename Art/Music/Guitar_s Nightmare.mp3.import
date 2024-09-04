@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://m2ry6pwm3tih"
+path="res://.godot/imported/Guitar_s Nightmare.mp3-bc43113862e6663777755f69a8d1e21d.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Guitar_s Nightmare.mp3"
+dest_files=["res://.godot/imported/Guitar_s Nightmare.mp3-bc43113862e6663777755f69a8d1e21d.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

@@ -1,0 +1,11 @@
+[gd_scene load_steps=3 format=3 uid="uid://dvd40148x5seh"]
+
+[ext_resource type="Script" path="res://Scripts/spawn.gd" id="1_lahpm"]
+[ext_resource type="Texture2D" uid="uid://bnc2wqinqphmn" path="res://Art/Spawn/Spawn.png" id="2_omi52"]
+
+[node name="Spawn" type="Node2D"]
+scale = Vector2(0.03, 0.03)
+script = ExtResource("1_lahpm")
+
+[node name="Sprite2D" type="Sprite2D" parent="."]
+texture = ExtResource("2_omi52")

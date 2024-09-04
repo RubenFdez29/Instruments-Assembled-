@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://d1ui7ip04mpr7"
+path="res://.godot/imported/Travelers_ Home a duo.mp3-331f32720b1540d83a72f20523eef041.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Travelers_ Home a duo.mp3"
+dest_files=["res://.godot/imported/Travelers_ Home a duo.mp3-331f32720b1540d83a72f20523eef041.mp3str"]
+
+[params]
+
+loop=true
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

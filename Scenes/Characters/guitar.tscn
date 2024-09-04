@@ -1,0 +1,95 @@
+[gd_scene load_steps=13 format=3 uid="uid://b8tt8ogt62cua"]
+
+[ext_resource type="Script" path="res://Scripts/Characters/guitar.gd" id="1_13unm"]
+[ext_resource type="Texture2D" uid="uid://i8fffwrbg8co" path="res://Art/Characters/Instruments/Guitarra.png" id="1_hm0i1"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_lx4qy"]
+atlas = ExtResource("1_hm0i1")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ljes0"]
+atlas = ExtResource("1_hm0i1")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_me8rq"]
+atlas = ExtResource("1_hm0i1")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_pd3gb"]
+atlas = ExtResource("1_hm0i1")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_wy2mu"]
+atlas = ExtResource("1_hm0i1")
+region = Rect2(2048, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_gpacd"]
+atlas = ExtResource("1_hm0i1")
+region = Rect2(2560, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_5mp78"]
+atlas = ExtResource("1_hm0i1")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_7fr1x"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_lx4qy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ljes0")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_me8rq")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_pd3gb")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_wy2mu")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_gpacd")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}, {
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_5mp78")
+}],
+"loop": true,
+"name": &"static",
+"speed": 5.0
+}]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mi8pg"]
+size = Vector2(221, 507)
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_cfgww"]
+radius = 171.429
+
+[node name="Guitar" type="CharacterBody2D"]
+scale = Vector2(0.07, 0.07)
+collision_layer = 17
+script = ExtResource("1_13unm")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(0, -256)
+sprite_frames = SubResource("SpriteFrames_7fr1x")
+animation = &"static"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(2, -254)
+shape = SubResource("RectangleShape2D_mi8pg")
+
+[node name="Detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection_area"]
+position = Vector2(0, -142.857)
+shape = SubResource("CircleShape2D_cfgww")
+
+[connection signal="body_entered" from="Detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="Detection_area" to="." method="_on_detection_area_body_exited"]

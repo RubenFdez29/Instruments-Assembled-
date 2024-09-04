@@ -1,0 +1,196 @@
+[gd_scene load_steps=16 format=3 uid="uid://c60cpairuxpxp"]
+
+[ext_resource type="Script" path="res://Scripts/Minigames/guitars_minigame.gd" id="1_hy1gk"]
+[ext_resource type="Texture2D" uid="uid://cogetdppdg56i" path="res://Art/Minigames/minigame_cavern.png" id="2_jkvuh"]
+[ext_resource type="Texture2D" uid="uid://dn4mnf3ehofp" path="res://Art/Guitars and Trumpets world/Atlas_guitar_nightmare.png" id="2_uha74"]
+[ext_resource type="AudioStream" uid="uid://o4rgcudqtavo" path="res://Art/Music/Minigames/1. Sube, baja o se mantiene/1st melody.mp3" id="3_g0dei"]
+[ext_resource type="PackedScene" uid="uid://8qnhmgdmxsii" path="res://Scenes/pause_menu.tscn" id="4_2j6xb"]
+[ext_resource type="AudioStream" uid="uid://d017qm8leob8d" path="res://Art/Music/Minigames/1. Sube, baja o se mantiene/2nd melody.mp3" id="4_eu01b"]
+[ext_resource type="FontFile" uid="uid://c1mr846x6fx8w" path="res://Art/Font/NerkoOne-Regular.ttf" id="4_h4eep"]
+[ext_resource type="AudioStream" uid="uid://dkj56i5mrrlj8" path="res://Art/Music/Minigames/1. Sube, baja o se mantiene/3rd melody.mp3" id="5_immwo"]
+[ext_resource type="AudioStream" uid="uid://c1m0myg3762qk" path="res://Art/Music/Minigames/1. Sube, baja o se mantiene/4th melody.mp3" id="6_ailkj"]
+[ext_resource type="AudioStream" uid="uid://bi0b8dnuywpx1" path="res://Art/Music/Minigames/1. Sube, baja o se mantiene/5th melody.mp3" id="7_j782m"]
+[ext_resource type="AudioStream" uid="uid://d03xxu4kbojm7" path="res://Art/Music/Minigames/1. Sube, baja o se mantiene/6th melody.mp3" id="8_jqrnk"]
+[ext_resource type="AudioStream" uid="uid://c3t2cnw80bvh0" path="res://Art/Music/Minigames/1. Sube, baja o se mantiene/7th melody.mp3" id="9_xp6lu"]
+[ext_resource type="AudioStream" uid="uid://bt0r7dowkt6f4" path="res://Art/Music/Minigames/1. Sube, baja o se mantiene/8th melody.mp3" id="10_vlxxp"]
+
+[sub_resource type="TileSetAtlasSource" id="TileSetAtlasSource_p3ghq"]
+texture = ExtResource("2_uha74")
+5:0/0 = 0
+6:0/0 = 0
+7:0/0 = 0
+7:1/0 = 0
+6:1/0 = 0
+5:1/0 = 0
+5:2/0 = 0
+6:2/0 = 0
+7:2/0 = 0
+
+[sub_resource type="TileSet" id="TileSet_ivkhp"]
+sources/0 = SubResource("TileSetAtlasSource_p3ghq")
+
+[node name="Guitars_minigame" type="Node2D"]
+script = ExtResource("1_hy1gk")
+
+[node name="TextureRect" type="TextureRect" parent="."]
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_top = -4.0
+offset_right = 1280.0
+offset_bottom = 580.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_jkvuh")
+
+[node name="TileMap" type="TileMap" parent="TextureRect"]
+tile_set = SubResource("TileSet_ivkhp")
+format = 2
+layer_0/tile_data = PackedInt32Array(1048591, 327680, 0, 1048592, 393216, 0, 1048593, 393216, 0, 1048594, 393216, 0, 1048595, 393216, 0, 1048596, 393216, 0, 1048597, 458752, 0, 1114127, 327680, 1, 1179663, 327680, 1, 1245199, 327680, 2, 1245200, 393216, 2, 1245201, 393216, 2, 1245202, 393216, 2, 1245203, 393216, 2, 1245204, 393216, 2, 1245205, 458752, 2, 1179669, 458752, 1, 1114133, 458752, 1, 1114128, 393216, 1, 1114129, 393216, 1, 1114130, 393216, 1, 1114131, 393216, 1, 1114132, 393216, 1, 1179664, 393216, 1, 1179665, 393216, 1, 1179666, 393216, 1, 1179667, 393216, 1, 1179668, 393216, 1, 1310758, 393216, 0, 1310759, 393216, 0, 1310760, 393216, 0, 1310761, 393216, 0, 1310762, 458752, 0, 1310757, 393216, 0, 1310756, 327680, 0, 1376292, 327680, 1, 1376293, 393216, 1, 1376294, 393216, 1, 1376295, 393216, 1, 1376296, 393216, 1, 1376297, 393216, 1, 1441833, 393216, 1, 1441832, 393216, 1, 1441831, 393216, 1, 1441830, 393216, 1, 1441829, 393216, 1, 1441828, 327680, 1, 1376298, 458752, 1, 1441834, 458752, 1, 1507370, 458752, 2, 1507364, 327680, 2, 1507365, 393216, 2, 1507366, 393216, 2, 1507367, 393216, 2, 1507368, 393216, 2, 1507369, 393216, 2, 1572922, 327680, 0, 1572923, 393216, 0, 1572924, 393216, 0, 1572925, 393216, 0, 1572926, 393216, 0, 1572927, 393216, 0, 1572928, 458752, 0, 1638459, 393216, 1, 1638460, 393216, 1, 1638461, 393216, 1, 1638462, 393216, 1, 1638463, 393216, 1, 1703999, 393216, 1, 1703998, 393216, 1, 1703997, 393216, 1, 1703996, 393216, 1, 1703995, 393216, 1, 1703994, 327680, 1, 1638458, 327680, 1, 1704000, 458752, 1, 1638464, 458752, 1, 1769531, 393216, 2, 1769532, 393216, 2, 1769533, 393216, 2, 1769534, 393216, 2, 1769535, 393216, 2, 1769536, 458752, 2, 1769530, 327680, 2)
+
+[node name="Up" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 271.0
+offset_top = -20.0
+offset_right = 318.0
+offset_bottom = 12.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_h4eep")
+theme_override_font_sizes/font_size = 25
+text = "Sube"
+horizontal_alignment = 1
+
+[node name="Down" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 960.0
+offset_top = 107.0
+offset_right = 1007.0
+offset_bottom = 139.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_h4eep")
+theme_override_font_sizes/font_size = 25
+text = "Baja"
+horizontal_alignment = 1
+
+[node name="Stay" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 570.0
+offset_top = 49.0
+offset_right = 694.0
+offset_bottom = 81.0
+grow_vertical = 2
+theme_override_fonts/font = ExtResource("4_h4eep")
+theme_override_font_sizes/font_size = 22
+text = "Se mantiene"
+horizontal_alignment = 1
+
+[node name="Repeat" type="Label" parent="TextureRect"]
+layout_mode = 1
+anchors_preset = 4
+anchor_top = 0.5
+anchor_bottom = 0.5
+offset_left = 465.0
+offset_top = -244.0
+offset_right = 820.0
+offset_bottom = -212.0
+grow_vertical = 2
+theme_override_font_sizes/font_size = 20
+text = "Haz click para reproducir la melodía"
+horizontal_alignment = 1
+
+[node name="Up_button" type="TextureButton" parent="."]
+offset_left = 240.0
+offset_top = 253.0
+offset_right = 353.0
+offset_bottom = 317.0
+mouse_default_cursor_shape = 2
+
+[node name="Down_button" type="TextureButton" parent="."]
+offset_left = 928.0
+offset_top = 381.0
+offset_right = 1038.0
+offset_bottom = 444.0
+mouse_default_cursor_shape = 2
+
+[node name="Stay_button" type="TextureButton" parent="."]
+offset_left = 577.0
+offset_top = 317.0
+offset_right = 687.0
+offset_bottom = 380.0
+mouse_default_cursor_shape = 2
+
+[node name="Play_button" type="Button" parent="."]
+modulate = Color(0, 0.764706, 0.435294, 1)
+anchors_preset = 5
+anchor_left = 0.5
+anchor_right = 0.5
+offset_left = 588.0
+offset_top = 80.0
+offset_right = 685.0
+offset_bottom = 112.0
+grow_horizontal = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("4_h4eep")
+theme_override_font_sizes/font_size = 25
+text = "Reproducir"
+
+[node name="CanvasLayer" type="CanvasLayer" parent="."]
+
+[node name="Pause_menu" parent="CanvasLayer" instance=ExtResource("4_2j6xb")]
+process_mode = 3
+
+[node name="1st_melody" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_g0dei")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="2nd_melody" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_eu01b")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="3rd_melody" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("5_immwo")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="4th_melody" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("6_ailkj")
+volume_db = -5.0
+bus = &"Music"
+
+[node name="5th_melody" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("7_j782m")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="6th_melody" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("8_jqrnk")
+volume_db = -10.0
+bus = &"Music"
+
+[node name="7th_melody" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("9_xp6lu")
+volume_db = -5.0
+bus = &"Music"
+
+[node name="8th_melody" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("10_vlxxp")
+volume_db = -10.0
+bus = &"Music"
+
+[connection signal="pressed" from="Up_button" to="." method="_on_up_button_pressed"]
+[connection signal="pressed" from="Down_button" to="." method="_on_down_button_pressed"]
+[connection signal="pressed" from="Stay_button" to="." method="_on_stay_button_pressed"]
+[connection signal="pressed" from="Play_button" to="." method="_on_play_button_pressed"]

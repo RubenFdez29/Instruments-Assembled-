@@ -1,0 +1,113 @@
+[gd_scene load_steps=16 format=3 uid="uid://dexn07nc7srwg"]
+
+[ext_resource type="Script" path="res://Scripts/Characters/trumpet.gd" id="1_4gk2b"]
+[ext_resource type="Texture2D" uid="uid://cox8f6a385qeu" path="res://Art/Characters/Instruments/Trompeta.png" id="1_xas2o"]
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_147cy"]
+atlas = ExtResource("1_xas2o")
+region = Rect2(0, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_dbpfk"]
+atlas = ExtResource("1_xas2o")
+region = Rect2(512, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_m5mxt"]
+atlas = ExtResource("1_xas2o")
+region = Rect2(1024, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_21nm2"]
+atlas = ExtResource("1_xas2o")
+region = Rect2(1536, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_c72sm"]
+atlas = ExtResource("1_xas2o")
+region = Rect2(2048, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_v1b73"]
+atlas = ExtResource("1_xas2o")
+region = Rect2(2560, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ar3rh"]
+atlas = ExtResource("1_xas2o")
+region = Rect2(3072, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_7yyhv"]
+atlas = ExtResource("1_xas2o")
+region = Rect2(3584, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_ib5n7"]
+atlas = ExtResource("1_xas2o")
+region = Rect2(4096, 0, 512, 512)
+
+[sub_resource type="AtlasTexture" id="AtlasTexture_d80ff"]
+atlas = ExtResource("1_xas2o")
+region = Rect2(4608, 0, 512, 512)
+
+[sub_resource type="SpriteFrames" id="SpriteFrames_f6asv"]
+animations = [{
+"frames": [{
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_147cy")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_dbpfk")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_m5mxt")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_21nm2")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_c72sm")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_v1b73")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ar3rh")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_7yyhv")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_ib5n7")
+}, {
+"duration": 1.0,
+"texture": SubResource("AtlasTexture_d80ff")
+}],
+"loop": true,
+"name": &"idle",
+"speed": 5.0
+}]
+
+[sub_resource type="CapsuleShape2D" id="CapsuleShape2D_j5qvc"]
+radius = 100.0
+height = 520.0
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_i441l"]
+size = Vector2(880, 440)
+
+[node name="Trumpet" type="CharacterBody2D"]
+scale = Vector2(0.05, 0.05)
+script = ExtResource("1_4gk2b")
+
+[node name="AnimatedSprite2D" type="AnimatedSprite2D" parent="."]
+position = Vector2(-20, -100)
+sprite_frames = SubResource("SpriteFrames_f6asv")
+animation = &"idle"
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-20, -100)
+rotation = 4.71239
+shape = SubResource("CapsuleShape2D_j5qvc")
+
+[node name="Detection_area" type="Area2D" parent="."]
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="Detection_area"]
+position = Vector2(-4.76837e-06, -100)
+scale = Vector2(1, 1)
+shape = SubResource("RectangleShape2D_i441l")
+
+[connection signal="body_entered" from="Detection_area" to="." method="_on_detection_area_body_entered"]
+[connection signal="body_exited" from="Detection_area" to="." method="_on_detection_area_body_exited"]

@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://viqrumqa6u3w"
+path="res://.godot/imported/1 - Birds flying high.mp3-a00241567d35d6ff5b837e493fb781d9.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Minigames/2. Los animales/1 - Birds flying high.mp3"
+dest_files=["res://.godot/imported/1 - Birds flying high.mp3-a00241567d35d6ff5b837e493fb781d9.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

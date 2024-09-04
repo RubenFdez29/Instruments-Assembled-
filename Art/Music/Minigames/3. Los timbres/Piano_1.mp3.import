@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c5uk8j7hkmqxj"
+path="res://.godot/imported/Piano_1.mp3-6c471bfa8a11c222a27645603f7c5a25.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Minigames/3. Los timbres/Piano_1.mp3"
+dest_files=["res://.godot/imported/Piano_1.mp3-6c471bfa8a11c222a27645603f7c5a25.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

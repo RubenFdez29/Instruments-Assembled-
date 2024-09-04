@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://o4rgcudqtavo"
+path="res://.godot/imported/1st melody.mp3-f28165e3241da9ef9e54f3209d3fae1a.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Minigames/1. Sube, baja o se mantiene/1st melody.mp3"
+dest_files=["res://.godot/imported/1st melody.mp3-f28165e3241da9ef9e54f3209d3fae1a.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4

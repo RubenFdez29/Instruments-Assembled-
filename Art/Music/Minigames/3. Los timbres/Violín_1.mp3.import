@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://cx4r7x57otjbg"
+path="res://.godot/imported/Violín_1.mp3-4bbf8174fdd8526f85057a2900f0b759.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Minigames/3. Los timbres/Violín_1.mp3"
+dest_files=["res://.godot/imported/Violín_1.mp3-4bbf8174fdd8526f85057a2900f0b759.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0
+bpm=0
+beat_count=0
+bar_beats=4

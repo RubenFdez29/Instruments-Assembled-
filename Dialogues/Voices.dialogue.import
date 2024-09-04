@@ -1,0 +1,15 @@
+[remap]
+
+importer="dialogue_manager_compiler_12"
+type="Resource"
+uid="uid://dla2has6cmixq"
+path="res://.godot/imported/Voices.dialogue-4b7f7400d88daae0b11c5cdcc61d491e.tres"
+
+[deps]
+
+source_file="res://Dialogues/Voices.dialogue"
+dest_files=["res://.godot/imported/Voices.dialogue-4b7f7400d88daae0b11c5cdcc61d491e.tres"]
+
+[params]
+
+defaults=true

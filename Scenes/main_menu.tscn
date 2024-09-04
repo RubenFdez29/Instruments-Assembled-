@@ -1,0 +1,547 @@
+[gd_scene load_steps=12 format=3 uid="uid://dr22olp284uxt"]
+
+[ext_resource type="Script" path="res://Scripts/main_menu.gd" id="1_jgw6j"]
+[ext_resource type="Texture2D" uid="uid://wack6nwtcck4" path="res://Art/Menu/Wallpaper.jpg" id="1_mcob8"]
+[ext_resource type="Texture2D" uid="uid://i2g6545gj0st" path="res://Art/Menu/Char_select_layout.jpg" id="2_47rp4"]
+[ext_resource type="FontFile" uid="uid://c1mr846x6fx8w" path="res://Art/Font/NerkoOne-Regular.ttf" id="3_72sy5"]
+[ext_resource type="AudioStream" uid="uid://dvpjuedm3hfcc" path="res://Art/Music/Going Home.mp3" id="3_vyda5"]
+[ext_resource type="AudioStream" uid="uid://c2tr6il7ah8mk" path="res://Art/Music/Jugar.mp3" id="4_fb8ra"]
+[ext_resource type="AudioStream" uid="uid://cwue1337t17i6" path="res://Art/Music/Boton.mp3" id="4_jkjal"]
+[ext_resource type="PackedScene" uid="uid://b8tt8ogt62cua" path="res://Scenes/Characters/guitar.tscn" id="6_kdkva"]
+[ext_resource type="PackedScene" uid="uid://d3iuv26yn08x5" path="res://Scenes/Characters/cello.tscn" id="7_n56rp"]
+[ext_resource type="PackedScene" uid="uid://dexn07nc7srwg" path="res://Scenes/Characters/trumpet.tscn" id="8_6ad4t"]
+[ext_resource type="PackedScene" uid="uid://c53ungwvd3tpb" path="res://Scenes/Characters/tambourine.tscn" id="9_u1iby"]
+
+[node name="MainMenu" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+script = ExtResource("1_jgw6j")
+
+[node name="Principal" type="TextureRect" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("1_mcob8")
+
+[node name="Title" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.497
+anchor_top = 0.12
+anchor_right = 0.497
+anchor_bottom = 0.12
+offset_left = -368.16
+offset_top = -40.6
+offset_right = 383.84
+offset_bottom = 51.4
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 75
+text = "INTRUMENTS: ASSEMBLED!"
+
+[node name="Menu" type="VBoxContainer" parent="."]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -128.5
+offset_top = -135.5
+offset_right = 128.5
+offset_bottom = 135.5
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Start" type="Button" parent="Menu"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 50
+text = "Jugar"
+
+[node name="Load" type="Button" parent="Menu"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 50
+text = "Continuar"
+
+[node name="Options" type="Button" parent="Menu"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 50
+text = "Opciones"
+
+[node name="Exit" type="Button" parent="Menu"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 50
+text = "Salir"
+
+[node name="Character_selection" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="Selector" type="TextureRect" parent="Character_selection"]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+texture = ExtResource("2_47rp4")
+
+[node name="F_01_button" type="TextureButton" parent="Character_selection/Selector"]
+layout_mode = 0
+offset_left = 43.0
+offset_top = 394.0
+offset_right = 92.0
+offset_bottom = 461.0
+mouse_default_cursor_shape = 2
+
+[node name="F_05_button" type="TextureButton" parent="Character_selection/Selector"]
+layout_mode = 0
+offset_left = 1188.0
+offset_top = 422.0
+offset_right = 1239.0
+offset_bottom = 489.0
+mouse_default_cursor_shape = 2
+
+[node name="F_06_button" type="TextureButton" parent="Character_selection/Selector"]
+layout_mode = 0
+offset_left = 1081.0
+offset_top = 393.0
+offset_right = 1132.0
+offset_bottom = 460.0
+mouse_default_cursor_shape = 2
+
+[node name="F_07_button" type="TextureButton" parent="Character_selection/Selector"]
+layout_mode = 0
+offset_left = 148.0
+offset_top = 428.0
+offset_right = 199.0
+offset_bottom = 495.0
+mouse_default_cursor_shape = 2
+
+[node name="F_10_button" type="TextureButton" parent="Character_selection/Selector"]
+layout_mode = 0
+offset_left = 249.0
+offset_top = 393.0
+offset_right = 300.0
+offset_bottom = 460.0
+mouse_default_cursor_shape = 2
+
+[node name="F_12_button" type="TextureButton" parent="Character_selection/Selector"]
+layout_mode = 0
+offset_left = 457.0
+offset_top = 396.0
+offset_right = 508.0
+offset_bottom = 463.0
+mouse_default_cursor_shape = 2
+
+[node name="M_01_button" type="TextureButton" parent="Character_selection/Selector"]
+layout_mode = 0
+offset_left = 355.0
+offset_top = 425.0
+offset_right = 406.0
+offset_bottom = 492.0
+mouse_default_cursor_shape = 2
+
+[node name="M_03_button" type="TextureButton" parent="Character_selection/Selector"]
+layout_mode = 0
+offset_left = 980.0
+offset_top = 423.0
+offset_right = 1031.0
+offset_bottom = 490.0
+mouse_default_cursor_shape = 2
+
+[node name="M_04_button" type="TextureButton" parent="Character_selection/Selector"]
+layout_mode = 0
+offset_left = 581.0
+offset_top = 425.0
+offset_right = 632.0
+offset_bottom = 492.0
+mouse_default_cursor_shape = 2
+
+[node name="M_05_button" type="TextureButton" parent="Character_selection/Selector"]
+layout_mode = 0
+offset_left = 880.0
+offset_top = 395.0
+offset_right = 931.0
+offset_bottom = 462.0
+mouse_default_cursor_shape = 2
+
+[node name="M_07_button" type="TextureButton" parent="Character_selection/Selector"]
+layout_mode = 0
+offset_left = 780.0
+offset_top = 418.0
+offset_right = 831.0
+offset_bottom = 485.0
+mouse_default_cursor_shape = 2
+
+[node name="M_12_button" type="TextureButton" parent="Character_selection/Selector"]
+layout_mode = 0
+offset_left = 685.0
+offset_top = 395.0
+offset_right = 736.0
+offset_bottom = 462.0
+mouse_default_cursor_shape = 2
+
+[node name="Title_selection" type="Label" parent="Character_selection"]
+layout_mode = 1
+anchors_preset = -1
+anchor_left = 0.497
+anchor_top = 0.12
+anchor_right = 0.497
+anchor_bottom = 0.12
+offset_left = -381.16
+offset_top = -46.6
+offset_right = 388.84
+offset_bottom = 45.4
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 75
+text = "INTRUMENTS: ASSEMBLED!"
+
+[node name="Select" type="Label" parent="Character_selection"]
+modulate = Color(0.858824, 0.466667, 0.0980392, 1)
+layout_mode = 0
+offset_left = 483.0
+offset_top = 130.0
+offset_right = 795.0
+offset_bottom = 167.0
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 30
+text = "SELECCIONA TU PERSONAJE"
+
+[node name="BackFromSelection" type="Button" parent="Character_selection"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -81.0
+offset_top = -77.0
+offset_right = 81.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 50
+text = "Volver"
+
+[node name="Options" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="VBoxContainer" type="VBoxContainer" parent="Options"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -132.0
+offset_top = -97.0
+offset_right = 132.0
+offset_bottom = 97.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_constants/separation = 20
+
+[node name="Video" type="Button" parent="Options/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 50
+text = "Video"
+
+[node name="Audio" type="Button" parent="Options/VBoxContainer"]
+layout_mode = 2
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 50
+text = "Audio"
+
+[node name="BackFromOptions" type="Button" parent="Options"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -81.0
+offset_top = -77.0
+offset_right = 81.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 50
+text = "Volver"
+
+[node name="Video" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Video"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -170.0
+offset_top = -140.0
+offset_right = 56.0
+offset_bottom = -1.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+
+[node name="Labels" type="VBoxContainer" parent="Video/HBoxContainer"]
+layout_mode = 2
+
+[node name="FullScreen" type="Label" parent="Video/HBoxContainer/Labels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 33
+text = "Pantalla completa"
+horizontal_alignment = 1
+
+[node name="Borderless" type="Label" parent="Video/HBoxContainer/Labels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 33
+text = "Ventana sin bordes"
+horizontal_alignment = 1
+
+[node name="VSync" type="Label" parent="Video/HBoxContainer/Labels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 33
+text = "VSync"
+horizontal_alignment = 1
+
+[node name="Checks" type="VBoxContainer" parent="Video/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 6
+
+[node name="Fullscreen" type="CheckBox" parent="Video/HBoxContainer/Checks"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+
+[node name="Borderless" type="CheckBox" parent="Video/HBoxContainer/Checks"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+
+[node name="VSync" type="CheckBox" parent="Video/HBoxContainer/Checks"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+
+[node name="BackFromVideo" type="Button" parent="Video"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -81.0
+offset_top = -77.0
+offset_right = 81.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 50
+text = "Volver"
+
+[node name="Audio" type="Control" parent="."]
+visible = false
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="HBoxContainer" type="HBoxContainer" parent="Audio"]
+layout_mode = 1
+anchors_preset = 8
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+offset_left = -270.0
+offset_top = -140.0
+offset_right = 140.0
+offset_bottom = -6.0
+grow_horizontal = 2
+grow_vertical = 2
+scale = Vector2(1.5, 1.5)
+
+[node name="Labels" type="VBoxContainer" parent="Audio/HBoxContainer"]
+layout_mode = 2
+
+[node name="Master" type="Label" parent="Audio/HBoxContainer/Labels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 33
+text = "Global"
+horizontal_alignment = 1
+
+[node name="Music" type="Label" parent="Audio/HBoxContainer/Labels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 33
+text = "Música"
+horizontal_alignment = 1
+
+[node name="Sound FX" type="Label" parent="Audio/HBoxContainer/Labels"]
+layout_mode = 2
+theme_override_colors/font_color = Color(0, 0, 0, 1)
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 33
+text = "Efectos"
+horizontal_alignment = 1
+
+[node name="Slider" type="VBoxContainer" parent="Audio/HBoxContainer"]
+layout_mode = 2
+size_flags_horizontal = 3
+
+[node name="Master" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+min_value = -30.0
+max_value = 5.0
+step = 0.001
+
+[node name="Music" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+min_value = -5.0
+max_value = 20.0
+step = 0.001
+
+[node name="Sound FX" type="HSlider" parent="Audio/HBoxContainer/Slider"]
+layout_mode = 2
+size_flags_vertical = 3
+mouse_default_cursor_shape = 2
+min_value = -60.0
+max_value = 5.0
+step = 0.001
+
+[node name="BackFromAudio" type="Button" parent="Audio"]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = -81.0
+offset_top = -77.0
+offset_right = 81.0
+grow_horizontal = 2
+grow_vertical = 0
+mouse_default_cursor_shape = 2
+theme_override_fonts/font = ExtResource("3_72sy5")
+theme_override_font_sizes/font_size = 50
+text = "Volver"
+
+[node name="Play_sound" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_fb8ra")
+volume_db = -10.0
+bus = &"Sound FX"
+
+[node name="Going_home" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("3_vyda5")
+volume_db = -20.0
+autoplay = true
+bus = &"Music"
+
+[node name="Sound_button" type="AudioStreamPlayer" parent="."]
+stream = ExtResource("4_jkjal")
+volume_db = -20.0
+bus = &"Sound FX"
+
+[node name="Guitar" parent="." instance=ExtResource("6_kdkva")]
+position = Vector2(101, 460)
+scale = Vector2(0.5, 0.5)
+
+[node name="Cello" parent="." instance=ExtResource("7_n56rp")]
+position = Vector2(1136, 460)
+scale = Vector2(0.7, 0.7)
+
+[node name="Trumpet" parent="." instance=ExtResource("8_6ad4t")]
+position = Vector2(350, 432)
+rotation = -0.436332
+scale = Vector2(0.4, 0.4)
+
+[node name="Tambourine" parent="." instance=ExtResource("9_u1iby")]
+position = Vector2(886, 451)
+rotation = -0.174533
+scale = Vector2(0.4, 0.4)
+
+[connection signal="pressed" from="Menu/Start" to="." method="_on_start_pressed"]
+[connection signal="pressed" from="Menu/Load" to="." method="_on_load_pressed"]
+[connection signal="pressed" from="Menu/Options" to="." method="_on_options_pressed"]
+[connection signal="pressed" from="Menu/Exit" to="." method="_on_exit_pressed"]
+[connection signal="pressed" from="Character_selection/Selector/F_01_button" to="." method="_on_f_01_button_pressed"]
+[connection signal="pressed" from="Character_selection/Selector/F_05_button" to="." method="_on_f_05_button_pressed"]
+[connection signal="pressed" from="Character_selection/Selector/F_06_button" to="." method="_on_f_06_button_pressed"]
+[connection signal="pressed" from="Character_selection/Selector/F_07_button" to="." method="_on_f_07_button_pressed"]
+[connection signal="pressed" from="Character_selection/Selector/F_10_button" to="." method="_on_f_10_button_pressed"]
+[connection signal="pressed" from="Character_selection/Selector/F_12_button" to="." method="_on_f_12_button_pressed"]
+[connection signal="pressed" from="Character_selection/Selector/M_01_button" to="." method="_on_m_01_button_pressed"]
+[connection signal="pressed" from="Character_selection/Selector/M_03_button" to="." method="_on_m_03_button_pressed"]
+[connection signal="pressed" from="Character_selection/Selector/M_04_button" to="." method="_on_m_04_button_pressed"]
+[connection signal="pressed" from="Character_selection/Selector/M_05_button" to="." method="_on_m_05_button_pressed"]
+[connection signal="pressed" from="Character_selection/Selector/M_07_button" to="." method="_on_m_07_button_pressed"]
+[connection signal="pressed" from="Character_selection/Selector/M_12_button" to="." method="_on_m_12_button_pressed"]
+[connection signal="pressed" from="Character_selection/BackFromSelection" to="." method="_on_back_from_selection_pressed"]
+[connection signal="pressed" from="Options/VBoxContainer/Video" to="." method="_on_video_pressed"]
+[connection signal="pressed" from="Options/VBoxContainer/Audio" to="." method="_on_audio_pressed"]
+[connection signal="pressed" from="Options/BackFromOptions" to="." method="_on_back_from_options_pressed"]
+[connection signal="toggled" from="Video/HBoxContainer/Checks/Fullscreen" to="." method="_on_fullscreen_toggled"]
+[connection signal="toggled" from="Video/HBoxContainer/Checks/Borderless" to="." method="_on_borderless_toggled"]
+[connection signal="toggled" from="Video/HBoxContainer/Checks/VSync" to="." method="_on_v_sync_toggled"]
+[connection signal="pressed" from="Video/BackFromVideo" to="." method="_on_back_from_video_pressed"]
+[connection signal="value_changed" from="Audio/HBoxContainer/Slider/Master" to="." method="_on_master_value_changed"]
+[connection signal="value_changed" from="Audio/HBoxContainer/Slider/Music" to="." method="_on_music_value_changed"]
+[connection signal="value_changed" from="Audio/HBoxContainer/Slider/Sound FX" to="." method="_on_sound_fx_value_changed"]
+[connection signal="pressed" from="Audio/BackFromAudio" to="." method="_on_back_from_audio_pressed"]

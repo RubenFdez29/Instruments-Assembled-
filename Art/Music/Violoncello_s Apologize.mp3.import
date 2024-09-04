@@ -1,0 +1,19 @@
+[remap]
+
+importer="mp3"
+type="AudioStreamMP3"
+uid="uid://c0mcta7k5jshg"
+path="res://.godot/imported/Violoncello_s Apologize.mp3-93f19e70f1390a3448b39058dd349f6e.mp3str"
+
+[deps]
+
+source_file="res://Art/Music/Violoncello_s Apologize.mp3"
+dest_files=["res://.godot/imported/Violoncello_s Apologize.mp3-93f19e70f1390a3448b39058dd349f6e.mp3str"]
+
+[params]
+
+loop=false
+loop_offset=0.0
+bpm=0.0
+beat_count=0
+bar_beats=4
